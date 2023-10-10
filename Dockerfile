@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-RUN apt-get update && apt-get install -y python python-pip
-RUN pip install flask
-COPY app.py /opt/
-ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
+FROM python
+COPY . /opt/app-code
+Run pip install flask
+Run pip install flask-mysql
+ENTRYPOINT FLASK_APP=/opt/app-code/app.py flask run --host=0.0.0.0 
