@@ -1,14 +1,18 @@
 import os
 from flask import Flask
 app = Flask(__name__)
+...
+...
+color = "pink"
 
 @app.route("/")
 def main():
-    return "Welcome!"
+    print(color)
+    return render_templated('hello.html', color=color)
 
-@app.route('/how are you')
+@app.route('/hii')
 def hello():
-    return 'I am good, how about you?'
+    return 'how are u'
 
 @app.route('/hello')
 def hello2():
