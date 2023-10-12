@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 ...
 ...
-color = "pink"
+APP_COLOR = "pink"
 
 @app.route("/")
 def main():
