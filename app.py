@@ -7,8 +7,8 @@ APP_COLOR = "pink"
 
 @app.route("/")
 def main():
-    print(color)
-    return render_templated('hello.html', color=color)
+    print(APP_COLOR)
+    return render_templated('hello.html', APP_COLOR= "PINK" )
 
 @app.route('/hii')
 def hello():
