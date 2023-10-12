@@ -3,12 +3,12 @@ from flask import Flask
 app = Flask(__name__)
 ...
 ...
-APP_COLOR = "pink"
+color = "red"
 
 @app.route("/")
-def main():
-    print(APP_COLOR)
-    return render_templated('hello.html', APP_COLOR= "PINK" )
+def main() :
+    print(color)
+    return render_templated('hello.html', color=color )
 
 @app.route('/hii')
 def hello():
@@ -19,4 +19,4 @@ def hello2():
     return 'This is sravani'
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8087)
